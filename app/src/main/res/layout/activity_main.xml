@@ -7,13 +7,49 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:clickable="false"
+        android:ems="18"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        />
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:ems="18"
+        android:hint="Message"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        />
+
+    <Button
+        android:id="@+id/channel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SEND ON CHANNEL 1"
+        android:onClick="sendOnChannel1"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/message"
+
+        />
+    <Button
+        android:id="@+id/channel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SEND ON CHANNEL 2"
+        android:onClick="sendOnChannel2"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/channel1"
+
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
